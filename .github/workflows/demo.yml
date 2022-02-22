@@ -1,23 +1,22 @@
-name: demo-action
+name: demo
 
 on: push
 
-jobs: 
+jobs:
   ubuntu:
     runs-on: ubuntu-latest
     steps:
-        -run: date
+    - run: date
   windows:
-    runs-on: windows-latest
+      runs-on: windows-latest
     steps:
-        -run: date
+    - run: date
   macos:
-  runs-on: macos-latest
+      runs-on: macos-latest
     steps:
-        -run: date
+    - run: date
   depends:
-  needs: [ubuntu, windows, macos]
-  runs-on: macos-latest
+      needs: [ubuntu, windows, macos]
+      runs-on: macos-latest
     steps:
-        -run: date
-  
+    - run: date
